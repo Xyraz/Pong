@@ -1,15 +1,16 @@
 import pygame, sys
 
-
 screen_width = 1280
 screen_height = 800
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Pong")
 
+
 clock = pygame.time.Clock()
 
 ball = pygame.Rect(0,0,30,30)
+
 
 while True:
     for event in pygame.event.get():
@@ -17,6 +18,7 @@ while True:
             pygame.quit()
             sys.exit()
 
+    pygame.draw.rect(screen,'white',ball)
     pygame.display.update()
     clock.tick(60)
 
