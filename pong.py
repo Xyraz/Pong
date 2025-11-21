@@ -24,6 +24,7 @@ while True:
             pygame.quit()
             sys.exit()
 
+    pygame.draw.aaline(screen,'white',(screen_width/2,0),(screen_width/2,screen_height))
     pygame.draw.ellipse(screen,'white',ball)
     pygame.draw.rect(screen,'white',cpu)
     pygame.draw.rect(screen,'white',player)
