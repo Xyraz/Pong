@@ -17,6 +17,7 @@ while True:
             pygame.quit()
             sys.exit()
 
+    pygame.draw.rect(screen,'white',ball)
     pygame.display.update()
     clock.tick(60)
 
