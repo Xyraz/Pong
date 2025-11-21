@@ -3,6 +3,7 @@ import pygame, sys
 pygame.init
 
 def animate_ball():
+    global ball_speed_x,ball_speed_y
     ball.x += ball_speed_x
     ball.y += ball_speed_y
 
