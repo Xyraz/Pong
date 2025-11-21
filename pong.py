@@ -1,5 +1,19 @@
 import pygame, sys
 
+pygame.init
+
+def animate_ball():
+    ball.x += ball_speed_x
+    ball.y += ball_speed_y
+
+    
+    if ball.bottom >= screen_height or ball.top <= 0:
+        ball_speed_y *= -1
+    if ball.right >= screen_width or ball.left <= 0:
+        ball_speed_x *= -1
+
+
+
 screen_width = 1280
 screen_height = 800
 
@@ -28,14 +42,6 @@ while True:
             pygame.quit()
             sys.exit()
 
-    ball.x += ball_speed_x
-    ball.y += ball_speed_y
-
-    
-    if ball.bottom >= screen_height or ball.top <= 0:
-        ball_speed_y *= -1
-    if ball.right >= screen_width or ball.left <= 0:
-        ball_speed_x *= -1
 
     screen.fill('black')
     pygame.draw.aaline(screen,'white',(screen_width/2,0),(screen_width/2,screen_height))
