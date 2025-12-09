@@ -46,8 +46,11 @@ while True:
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     player_speed = -6
+                if event.key == pygame.K__DOWN:
+                    player__speed = 6
 
     animate_ball()
+    player y += player_speed
     screen.fill('black')
     pygame.draw.aaline(screen,'white',(screen_width/2,0),(screen_width/2,screen_height))
     pygame.draw.ellipse(screen,'white',ball)
