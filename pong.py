@@ -43,7 +43,9 @@ while True:
             pygame.quit()
             sys.exit()
 
+            if event.type == pygame.KEYDOWN:
 
+    animate_ball()
     screen.fill('black')
     pygame.draw.aaline(screen,'white',(screen_width/2,0),(screen_width/2,screen_height))
     pygame.draw.ellipse(screen,'white',ball)
