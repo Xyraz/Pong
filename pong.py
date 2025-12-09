@@ -13,7 +13,13 @@ def animate_ball():
     if ball.right >= screen_width or ball.left <= 0:
         ball_speed_x *= -1
 
+def animate_player():
+    player.y += player_speed
 
+    if player.top <= 0:
+        player.top = 0
+    if player.bottom >= screen_height:
+        player.bottom = screen_height
 
 screen_width = 1280
 screen_height = 800
@@ -54,7 +60,8 @@ while True:
                     player__speed = 0
 
     animate_ball()
-    player y += player_speed
+    animate_player()
+
     screen.fill('black')
     pygame.draw.aaline(screen,'white',(screen_width/2,0),(screen_width/2,screen_height))
     pygame.draw.ellipse(screen,'white',ball)
