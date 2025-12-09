@@ -35,7 +35,7 @@ player.midright = (screen_width,screen_width/2)
 
 ball_speed_x=6
 ball_speed_y = 6
-
+player_speed = 0
 
 while True:
     for event in pygame.event.get():
@@ -44,6 +44,8 @@ while True:
             sys.exit()
 
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP:
+                    player_speed = -6
 
     animate_ball()
     screen.fill('black')
