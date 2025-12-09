@@ -48,6 +48,10 @@ while True:
                     player_speed = -6
                 if event.key == pygame.K__DOWN:
                     player__speed = 6
+                if event.key == pygame.K_UP:
+                    player_speed = 0
+                if event.key == pygame.K__DOWN:
+                    player__speed = 0
 
     animate_ball()
     player y += player_speed
